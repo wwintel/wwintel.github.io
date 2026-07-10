@@ -1,0 +1,16 @@
+{
+  "name": "Worldwide AI Intel",
+  "short_name": "WWAII",
+  "description": "Global AI model leaderboard and benchmark rankings.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0b10",
+  "theme_color": "#0a0b10",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

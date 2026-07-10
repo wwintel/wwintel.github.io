@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ═══ Primary SEO ═══ -->
+<title>Worldwide AI Intel — Global LLM Leaderboard & Benchmark Rankings</title>
+<meta name="description" content="Worldwide AI Intel (WWAII) ranks leading AI language models — Claude, GPT, Gemini, Grok, DeepSeek, Llama and more — on a single intelligence benchmark. Updated leaderboard of global AI model performance.">
+<meta name="keywords" content="AI leaderboard, LLM benchmark, AI intelligence ranking, Claude vs GPT vs Gemini, best AI model 2026, AI model comparison, artificial intelligence rankings">
+<meta name="author" content="Solasprod">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://wwintel.github.io/">
+
+<!-- ═══ Open Graph / Facebook / LinkedIn ═══ -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wwintel.github.io/">
+<meta property="og:title" content="Worldwide AI Intel — Global LLM Leaderboard & Benchmark Rankings">
+<meta property="og:description" content="A single, evolving leaderboard ranking the world's leading AI models — Claude, GPT, Gemini, Grok, DeepSeek and more — on aggregate intelligence.">
+<meta property="og:image" content="https://wwintel.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Worldwide AI Intel">
+<meta property="og:locale" content="en_US">
+
+<!-- ═══ Twitter / X Card ═══ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://wwintel.github.io/">
+<meta name="twitter:title" content="Worldwide AI Intel — Global LLM Leaderboard">
+<meta name="twitter:description" content="Ranking the world's leading AI models on a single intelligence benchmark. Updated regularly.">
+<meta name="twitter:image" content="https://wwintel.github.io/og-image.png">
+
+<!-- ═══ Theming / Icons ═══ -->
+<meta name="theme-color" content="#0a0b10">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- ═══ Structured Data (JSON-LD) ═══ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Worldwide AI Intel",
+  "alternateName": "WWAII",
+  "url": "https://wwintel.github.io/",
+  "description": "A leaderboard ranking global AI language models on a single aggregate intelligence benchmark.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Solasprod"
+  }
+}
+</script>
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg-base: #0a0b10;
+    --text-primary: #e6e6ec;
+    --text-secondary: #7a7a8c;
+    --text-muted: #4a4a58;
+    --glass-bg: rgba(255, 255, 255, 0.035);
+    --glass-border: rgba(255, 255, 255, 0.07);
+    --glass-hover: rgba(255, 255, 255, 0.06);
+    --track-bg: rgba(255, 255, 255, 0.025);
+    --accent: #6c8cff;
+    --danger: #e85a6f;
+  }
+
+  body {
+    background: var(--bg-base);
+    color: var(--text-primary);
+    font-family: 'Inter', -apple-system, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 800px 600px at 15% 10%, rgba(70, 50, 120, 0.12), transparent 60%),
+      radial-gradient(ellipse 600px 500px at 85% 90%, rgba(20, 80, 100, 0.10), transparent 60%),
+      radial-gradient(ellipse 500px 400px at 50% 50%, rgba(100, 40, 80, 0.06), transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    opacity: 0.025;
+    pointer-events: none;
+    z-index: 1;
+    mix-blend-mode: overlay;
+  }
+
+  .page {
+    position: relative;
+    z-index: 2;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 64px 36px 80px;
+  }
+
+  /* ── HEADER ── */
+  .header { margin-bottom: 44px; }
+
+  .header-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .header-eyebrow::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--text-muted);
+  }
+
+  .header h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 44px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    margin-bottom: 12px;
+  }
+
+  .header-sub {
+    font-size: 15px;
+    color: var(--text-secondary);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .benchmark-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--text-primary);
+  }
+
+  /* ── CONTROLS ── */
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 4px;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .controls-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .model-count {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+  .model-count span { color: var(--text-primary); }
+
+  .controls-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .btn {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 7px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text-secondary);
+  }
+  .btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-primary);
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+  .btn:active { transform: scale(0.97); }
+
+  /* ── LEADERBOARD ── */
+  .leaderboard {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* ── VIEW MODE ROW ── */
+  .model-row {
+    display: grid;
+    grid-template-columns: 36px minmax(220px, 320px) 1fr 90px;
+    align-items: center;
+    gap: 24px;
+    padding: 18px 24px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    backdrop-filter: blur(20px) saturate(140%);
+    -webkit-backdrop-filter: blur(20px) saturate(140%);
+    transition: background 0.25s ease, border-color 0.25s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .model-row:hover {
+    background: var(--glass-hover);
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+
+  .model-row::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, transparent 40%, transparent 60%, rgba(255, 255, 255, 0.02) 100%);
+    pointer-events: none;
+    border-radius: inherit;
+  }
+
+  .rank {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-align: center;
+  }
+
+  .model-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+  }
+
+  .model-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .model-org {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--text-secondary);
+  }
+
+  .bar-track {
+    height: 28px;
+    background: var(--track-bg);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+  }
+
+  .bar-fill {
+    height: 100%;
+    border-radius: 5px;
+    position: relative;
+    width: 0;
+    transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    background: linear-gradient(90deg,
+      color-mix(in srgb, var(--tint) 12%, transparent),
+      color-mix(in srgb, var(--tint) 28%, transparent)
+    );
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-right: 1px solid color-mix(in srgb, var(--tint) 50%, transparent);
+    box-shadow:
+      inset 0 1px 0 color-mix(in srgb, var(--tint) 25%, transparent),
+      0 0 16px color-mix(in srgb, var(--tint) 15%, transparent);
+  }
+
+  .bar-fill::after {
+    content: '';
+    position: absolute;
+    right: -1px; top: 0; bottom: 0;
+    width: 2px;
+    background: color-mix(in srgb, var(--tint) 70%, transparent);
+    box-shadow: 0 0 8px color-mix(in srgb, var(--tint) 60%, transparent);
+    border-radius: 1px;
+  }
+
+  .bar-fill::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, transparent 50%);
+    border-radius: inherit;
+  }
+
+  .score {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    margin-top: 40px;
+    padding: 16px 4px;
+    font-size: 12px;
+    color: var(--text-muted);
+    font-family: 'JetBrains Mono', monospace;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .page { padding: 40px 20px 60px; }
+    .header h1 { font-size: 32px; }
+    .model-row {
+      grid-template-columns: 28px 1fr 70px;
+      grid-template-rows: auto auto;
+      gap: 8px 14px;
+      padding: 14px 16px;
+    }
+    .model-info { grid-column: 2; }
+    .bar-track { grid-column: 1 / -1; grid-row: 2; }
+    .score { grid-column: 3; grid-row: 1; }
+    .rank { grid-column: 1; grid-row: 1; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .bar-fill { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-eyebrow">Leaderboard</div>
+    <h1 id="page-title">Worldwide AI Intel</h1>
+    <div class="header-sub">
+      <span id="page-subtitle">Evaluating AI intelligence from models around the world</span>
+      <span class="benchmark-tag" id="benchmark-tag">WWAII</span>
+    </div>
+  </div>
+
+  <!-- CONTROLS -->
+  <div class="controls">
+    <div class="controls-left">
+      <div class="model-count"><span id="count">0</span> models evaluated</div>
+    </div>
+    <div class="controls-right" id="controls-right"></div>
+  </div>
+
+  <!-- LEADERBOARD -->
+  <div class="leaderboard" id="leaderboard"></div>
+
+  <!-- Static fallback for crawlers/browsers without JS. Keep in sync with DEFAULT_MODELS. -->
+  <noscript>
+    <table style="width:100%;border-collapse:collapse;margin-top:16px;">
+      <caption style="text-align:left;color:var(--text-secondary);margin-bottom:8px;">Worldwide AI Intel leaderboard — aggregate intelligence scores by model</caption>
+      <thead>
+        <tr><th style="text-align:left;padding:8px;">Rank</th><th style="text-align:left;padding:8px;">Model</th><th style="text-align:left;padding:8px;">Organization</th><th style="text-align:right;padding:8px;">Score</th></tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding:8px;">1</td><td style="padding:8px;">Claude Fable 5 (ultra)</td><td style="padding:8px;">Anthropic</td><td style="padding:8px;text-align:right;">60</td></tr>
+        <tr><td style="padding:8px;">2</td><td style="padding:8px;">Claude Opus 4.8 (max)</td><td style="padding:8px;">Anthropic</td><td style="padding:8px;text-align:right;">56</td></tr>
+        <tr><td style="padding:8px;">3</td><td style="padding:8px;">Grok 4.5 (high)</td><td style="padding:8px;">SpaceX AI</td><td style="padding:8px;text-align:right;">54</td></tr>
+        <tr><td style="padding:8px;">4</td><td style="padding:8px;">TimeMachine PRO (Max)</td><td style="padding:8px;">TimeMachine</td><td style="padding:8px;text-align:right;">50</td></tr>
+        <tr><td style="padding:8px;">5</td><td style="padding:8px;">Sakana Fugu Ultra</td><td style="padding:8px;">Sakana</td><td style="padding:8px;text-align:right;">48</td></tr>
+        <tr><td style="padding:8px;">6</td><td style="padding:8px;">GPT 5.5 (high)</td><td style="padding:8px;">OpenAI</td><td style="padding:8px;text-align:right;">48</td></tr>
+        <tr><td style="padding:8px;">7</td><td style="padding:8px;">Gemini 3.5 Flash</td><td style="padding:8px;">Google</td><td style="padding:8px;text-align:right;">47</td></tr>
+        <tr><td style="padding:8px;">8</td><td style="padding:8px;">Gemini 3.1 Pro</td><td style="padding:8px;">Google</td><td style="padding:8px;text-align:right;">46</td></tr>
+        <tr><td style="padding:8px;">9</td><td style="padding:8px;">Kimi K2.6</td><td style="padding:8px;">Moonshot</td><td style="padding:8px;text-align:right;">46</td></tr>
+        <tr><td style="padding:8px;">10</td><td style="padding:8px;">DeepSeek V4 Pro (max)</td><td style="padding:8px;">DeepSeek</td><td style="padding:8px;text-align:right;">43</td></tr>
+      </tbody>
+    </table>
+    <p style="color:var(--text-muted);font-size:12px;margin-top:8px;">Enable JavaScript to view the full interactive leaderboard of 23 models.</p>
+  </noscript>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <span>Evaluating AI intelligence from models around the worlds | © Solasprod 2026</span>
+    <span id="last-updated"></span>
+  </div>
+
+</div>
+
+<script>
+  // ═══════════════════════════════════════════════════════════════
+  //  1. ORGANIZATION COLORS
+  //  Add new organizations here. The code will automatically use 
+  //  these colors when matching the "org" name in the models list.
+  // ═══════════════════════════════════════════════════════════════
+  
+  const ORG_COLORS = {
+    "anthropic": "#e8a06f",
+    "openai": "#ffffff",
+    "google": "#51ac7a",
+    "timemachine": "#00fcff",
+    "deepseek": "#008cff",
+    "spacex ai": "#8938ff",
+    "zai": "#0092ff",
+    "xiaomi": "#ff9200",
+    "sakana": "#fd4453",
+    "meta": "#0866ff",      // Added Meta as a fallback example
+    "mistral": "#ff7000"    // Added Mistral as a fallback example
+  };
+
+  const DEFAULT_TINT = "#6c8cff"; // Fallback color for unlisted orgs
+
+  function getTint(orgName) {
+    if (!orgName) return DEFAULT_TINT;
+    const key = orgName.toLowerCase().trim();
+    return ORG_COLORS[key] || DEFAULT_TINT;
+  }
+
+  // ═══════════════════════════════════════════════════════════════
+  //  2. CONFIGURATION & MODEL DATA
+  //  TO UPDATE: Simply change the text/numbers here.
+  //  Notice you no longer need to set 'tint'! Just name, org, and score.
+  // ═══════════════════════════════════════════════════════════════
+
+  const DEFAULT_CONFIG = {
+    title: "Worldwide AI Intel",
+    subtitle: "Evaluating AI intelligence from models around the world",
+    benchmarkName: "WWAII / ft. Artificial Analysis",
+    updatedAt: "June 2026"
+  };
+
+  const DEFAULT_MODELS = [
+    { name: "TimeMachine PRO (Max)", org: "TimeMachine",  score: 50 },
+    { name: "Claude Fable 5 (ultra)",        org: "Anthropic",    score: 60 },
+    { name: "Grok 4.5 (high)",                   org: "SpaceX AI",       score: 54 },
+    { name: "Gemini 3.1 Pro",           org: "Google",       score: 46 },
+    { name: "Sakana Fugu Ultra",           org: "Sakana",         score: 48 },
+    { name: "Claude Opus 4.8 (max)",          org: "Anthropic",      score: 56 },
+    { name: "XiaoMiMo v2.5 Pro",           org: "Xiaomi",         score: 42 },
+    { name: "Meta Llama 4",          org: "Meta",      score: 21 },
+    { name: "Kimi K2.6",           org: "Moonshot",         score: 46 },
+    { name: "GPT 5.5 (high)",          org: "OpenAI",      score: 48 },
+    { name: "Gemini 3.5 Flash",           org: "Google",         score: 47 },
+    { name: "Perplexity Sonar Pro",          org: "Perplexity",      score: 18 },
+    { name: "NVIDIA Nemotron 3 Ultra",           org: "NVIDIA",         score: 37 },
+    { name: "Amazon Nova 2 Pro",          org: "Amazon",      score: 22 },
+    { name: "ChatGPT 5.5 Instant",           org: "OpenAI",         score: 26 },
+    { name: "TimeMachine Air",          org: "TimeMachine",      score: 28 },
+    { name: "Grok 4.3 fast",           org: "SpaceX AI",         score: 25 },
+    { name: "Siri AI (iOS 27 Beta)",          org: "Apple",      score: 25 },
+    { name: "Sarvam 1 (high)",           org: "Sarvam India",         score: 12 },
+    { name: "Mistral Small 4",          org: "Mistral",      score: 19 },
+    { name: "Ekush ",           org: "Intelsense AI",         score: 4 },
+    { name: "AlapChari",          org: "Chatrik",      score: 2 },
+    { name: "DeepSeek V4 Pro (max)",              org: "DeepSeek",     score: 43 }
+  ];
+
+  // ═══════════════════════════════════════════════════════════════
+  //  LOGIC (No need to edit below this line)
+  // ═══════════════════════════════════════════════════════════════
+
+  let config = { ...DEFAULT_CONFIG };
+  let models = [...DEFAULT_MODELS];
+  let sortMode = "score-desc";
+
+  function getSortedModels() {
+    const sorted = [...models];
+    if (sortMode === "score-desc") sorted.sort((a, b) => b.score - a.score);
+    else if (sortMode === "score-asc") sorted.sort((a, b) => a.score - b.score);
+    else if (sortMode === "name-asc") sorted.sort((a, b) => a.name.localeCompare(b.name));
+    return sorted;
+  }
+
+  function getHighestScore() {
+    if (models.length === 0) return 1;
+    return Math.max(...models.map(m => m.score || 0));
+  }
+
+  function applyHeader() {
+    document.getElementById("page-title").textContent = config.title;
+    document.getElementById("page-subtitle").textContent = config.subtitle;
+    document.getElementById("benchmark-tag").textContent = config.benchmarkName;
+    document.getElementById("last-updated").textContent = "Updated " + config.updatedAt;
+    document.getElementById("count").textContent = models.length;
+  }
+
+  function renderControls() {
+    const right = document.getElementById("controls-right");
+    const sortLabel = sortMode === "score-desc" ? "Score ↓" :
+                      sortMode === "score-asc" ? "Score ↑" : "Name A-Z";
+    right.innerHTML = `<button class="btn" onclick="toggleSort()">Sort: ${sortLabel}</button>`;
+  }
+
+  function render() {
+    applyHeader();
+    renderControls();
+
+    const board = document.getElementById("leaderboard");
+    const sorted = getSortedModels();
+    const highest = getHighestScore();
+
+    board.innerHTML = "";
+
+    sorted.forEach((model, i) => {
+      const row = document.createElement("div");
+      row.className = "model-row";
+      
+      // Automatically pull the color based on the organization name
+      const dynamicTint = getTint(model.org);
+      row.style.setProperty("--tint", dynamicTint);
+
+      const pct = highest > 0 ? (model.score / highest) * 100 : 0;
+
+      row.innerHTML = `
+        <div class="rank">#${i + 1}</div>
+        <div class="model-info">
+          <div class="model-name">${escapeHtml(model.name)}</div>
+          <div class="model-org">${escapeHtml(model.org)}</div>
+        </div>
+        <div class="bar-track">
+          <div class="bar-fill" data-target="${pct}"></div>
+        </div>
+        <div class="score">${formatScore(model.score)}</div>
+      `;
+      board.appendChild(row);
+    });
+
+    // animate bars
+    requestAnimationFrame(() => {
+      const fills = board.querySelectorAll(".bar-fill");
+      fills.forEach((fill, i) => {
+        setTimeout(() => {
+          fill.style.width = fill.dataset.target + "%";
+        }, 60 + i * 80);
+      });
+    });
+  }
+
+  function toggleSort() {
+    if (sortMode === "score-desc") sortMode = "score-asc";
+    else if (sortMode === "score-asc") sortMode = "name-asc";
+    else sortMode = "score-desc";
+    render();
+  }
+
+  function escapeHtml(str) {
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  function formatScore(score) {
+    if (score === 0) return "0";
+    return Number.isInteger(score) ? String(score) : score.toFixed(1);
+  }
+
+  // INIT
+  render();
+</script>
+
+</body>
+</html>
